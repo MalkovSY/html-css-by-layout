@@ -113,6 +113,7 @@ body{
   background-position: center center;
   background-size: auto auto;
   margin-bottom: 190px;
+  position: relative;
 }
 
 .header__top{
@@ -146,6 +147,23 @@ body{
 
 .menu__list-item+.menu__list-item{
   margin-left: 45px;
+}
+
+.burger{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 40px;
+  right: 20px;
+}
+
+.burger__stick{
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 4px;
+  margin-bottom: 7px;
+  background-color: #000;
 }
 
 .header-content-inner{
@@ -326,7 +344,7 @@ body{
 }
 
 .school__text{
-  width: 600px;
+  max-width: 600px;
 }
 
 .school__text p{
@@ -394,11 +412,6 @@ body{
 .gallery__content{
   display: flex;
   flex-wrap: wrap;
-}
-
-.gallery__item{
-  /* margin-bottom: 40px;
-  margin-right: 40px; */
 }
 
 .gallery__item-1{
@@ -794,4 +807,347 @@ ul.pricing__item{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+
+@media (max-width: 790px){
+  .container{
+    max-width: 700px;
+  }
+  .title::after {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .header {
+    margin-bottom: 50px;
+  }
+  .menu__list{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, .9);
+  }
+  .menu__list-item{
+    padding: 30px;
+  }
+  .burger{
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+  .logo{
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+  .header__title {
+    font-size: 110px;
+    line-height: 200px;
+  }
+  .header__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .about__text p {
+    max-width: 450px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  .about__text {
+    margin-bottom: 50px;
+  }
+  .title {
+    font-size: 33px;
+    line-height: 37px;
+  }
+  .school__title {
+    padding: 100px;
+  }
+  .school__items{
+    flex-direction: column;
+  }
+  .school__item{
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .school__info{
+    max-width: 340px;
+  }
+  .school__info-inner{
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .school__info-item{
+    margin-bottom: 20px;
+  }
+  .school__text p{
+    max-width: 450px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .peaks{
+    background-image: none;
+    margin-left: 20px;
+    padding-bottom: 100px;
+  }
+  .peaks__title {
+    font-size: 21px;
+    padding: 80px 0 50px;
+    white-space: normal;
+  }
+  .peaks__text p {
+    max-width: 450px;
+  }
+  .gallery__title {
+    margin-bottom: 80px;
+  }
+  .gallery{
+    margin-left: 20px;
+    padding-bottom: 100px;
+  }
+  .gallery__content{
+    display: block;
+  }
+  .gallery__item {
+    max-width: 600px;
+    margin-bottom: 10px;
+  }
+  .gallery__item img {
+    max-width: 400px;
+  }
+  .gallery__more{
+    margin-bottom: 70px;
+  }
+  .blockquote{
+    max-width: 450px;
+    margin-bottom: 70px;
+  }
+  .gallery__video{
+    max-width: 450px;
+  }
+  .gallery__video-numbers{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .slider-blog-title{
+    margin-bottom: 100px;
+  }
+  .slider-blog{
+    max-width: 450px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+  .team{
+    padding-bottom: 100px;
+  }
+  .team__title{
+    margin-bottom: 100px;
+  }
+  .team__items{
+    flex-direction: column;
+    align-items: center;
+  }
+  .team__item{
+    margin-bottom: 25px;
+  }
+  .pricing{
+    max-width: 450px;
+    padding: 100px 0;
+  }
+  .pricing__title{
+    margin-bottom: 100px;
+  }
+  .pricing__items{
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing__items .pricing__item {
+    margin-bottom: 15px;
+  }
+  .submit__map{
+    max-width: 450px;
+    margin: 50px 0;
+  }
+  .submit__title{
+    max-width: 320px;
+    margin-bottom: 100px;
+  }
+  .form{
+    max-width: 570px;
+    margin-bottom: 40px;
+  }
+  .submit__question{
+    max-width: 450px;
+    margin-bottom: 70px;
+  }
+  .submit__inner{
+    max-width: 300px;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+  .submit{
+    padding-bottom: 80px;
+  }
+  .form button {
+    padding: 18px 80px 18px;
+  }
+  .submit__contact {
+    max-width: 450px;
+  }
+  .footer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 322px){
+  .menu__list{
+    top: 60px;
+    right: 10px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .header {
+    margin-bottom: 50px;
+  }
+  .header__title {
+    font-size: 90px;
+    line-height: 100px;
+  }
+  .header__subtitle {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .about__text p {
+    max-width: 320px;
+  }
+  .about__text {
+    margin-bottom: 50px;
+  }
+  .school__title {
+    padding: 50px;
+  }
+  .school__info-item{
+    max-width: 320px;
+  }
+  .item-85::before {
+    width: 180px;
+  }
+  .item-85 h5 {
+    margin-left: 185px;
+  }
+  .item-95::before {
+    width: 225px;
+  }
+  .item-95 h5 {
+    margin-left: 230px;
+  }
+  .item-99::before {
+    width: 240px;
+  }
+  .item-99 h5 {
+    margin-left: 244px;
+  }
+  .school__item-text {
+    max-width: 300px;
+  }
+  .school__text p {
+    max-width: 295px;
+    font-size: 17px;
+  }
+  .peaks__text p {
+    max-width: 280px;
+  }
+  .gallery__item img {
+    max-width: 259px;
+  }
+  .gallery__more-link {
+    font-size: 10px;
+    padding: 18px 58px 18px 58px;
+  }
+  ul.pricing__item {
+    max-width: 280px;
+    padding: 40px 5px;
+  }
+  .submit__map {
+    max-width: 290px;
+  }
+  .school__info{
+    max-width: 300px;
+  }
+  .blockquote p {
+    max-width: 245px;
+  }
+  .blockquote {
+    max-width: 284px;
+  }
+  .gallery__video {
+    max-width: 284px;
+  }
+  .gallery__video-numbers {
+    flex-direction: column;
+  }
+  .slider-blog {
+    max-width: 285px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .slider-blog__title {
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 300px;
+    margin-left: auto;
+  }
+  .team__item-img {
+    max-width: 280px;
+  }
+  .pricing {
+    max-width: 300px;
+    padding: 50px 0;
+  }
+  .form {
+    max-width: 300px;
+  }
+  .form button {
+    margin-top: 60px;
+    padding: 18px 70px 18px;
+    font-size: 22px;
+    line-height: 17px;
+  }
+  .submit__question {
+    max-width: 290px;
+  }
+  .submit__question p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  .submit {
+    padding-bottom: 50px;
+  }
+  .submit__contact {
+    max-width: 300px;
+  }
+  .submit__inner {
+    max-width: 300px;
+  }
+  .submit__contact-link {
+    line-height: 30px;
+  }
+  .footer {
+    max-width: 320px;
+  }
+}
+
+.menu__list_active{
+  display: flex;
 }

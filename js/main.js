@@ -59,4 +59,18 @@ $('.slider-blog__inner').slick({
   dots: true
 })
 
+const burger = document.querySelector('.burger'),
+      menu = document.querySelector('.menu__list'),
+      menuItem = document.querySelectorAll('.menu__list-link');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('menu__list_active');
+});
+
+menuItem.forEach(item => {
+  item.addEventListener('click', () => {
+    menu.classList.toggle('menu__list_active');
+  })
+})
+
 });
